@@ -23,8 +23,11 @@ static const char bg[] = "#3c3836";
 static const char *colors[SchemeLast][3] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { fg, bg },
+	[SchemeNormHighlight] = { green, bg },
 	[SchemeSel] = { fg, cyan },
+	[SchemeSelHighlight] = { yellow, cyan },
 	[SchemeOut] = { "#000000", "#00ffff" },
+	[SchemeOutHighlight] = { "#ffc978", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
