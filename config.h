@@ -8,10 +8,22 @@ static const char *fonts[] = {
 	"NotoColorEmoji:fontformat=truetype:size=10:antialias=false"
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
-static const char *colors[SchemeLast][2] = {
+
+static const char yellow[] = "#d79921";
+static const char red[] = "#cc241d";
+static const char blue[] = "#458588";
+static const char green[] = "#98971a";
+static const char cyan[] = "#427b58";
+
+//static const char fg[] = "#fbf1c7";
+static const char fg[] = "#ebdbb2";
+static const char bg[] = "#3c3836";
+
+
+static const char *colors[SchemeLast][3] = {
 	/*     fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel] = { "#eeeeee", "#005577" },
+	[SchemeNorm] = { fg, bg },
+	[SchemeSel] = { fg, cyan },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
